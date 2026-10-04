@@ -1,0 +1,56 @@
+:root{--teal:#0F3B3A;--brass:#B8893B;--sand:#EFE6D6;--ink:#1B1A17;--plum:#5A2A3A;--sale:#a8322d}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3,h4,.logo{font-family:Marcellus,serif;font-weight:400}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.bar{background:var(--ink);color:var(--sand);text-align:center;padding:7px 12px;font-size:.9rem}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:12px 4vw;background:#fff;border-bottom:1px solid #e8e2d6}
+.logo{font-size:1.5rem;text-decoration:none;color:var(--teal);margin-right:auto}
+#search{width:min(280px,40vw);padding:8px 12px;border:1px solid #cfc8b8;font:inherit}
+.ghost{background:none;border:1px solid var(--ink);padding:6px 12px;font:inherit;cursor:pointer}
+.cats{display:flex;gap:22px;padding:10px 4vw;overflow-x:auto;border-bottom:1px solid #e8e2d6}
+.cats button{background:none;border:0;font:inherit;cursor:pointer;white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent}
+.cats button.on{border-color:var(--brass);color:var(--teal);font-weight:600}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;background:var(--teal);color:var(--sand);min-height:60vh}
+.hero>div{padding:10vh 4vw;align-self:center}
+.hero h1{font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.1;margin-bottom:16px;max-width:15ch}
+.hero p{max-width:46ch;margin-bottom:24px;opacity:.9}
+.hero svg{width:100%;height:100%;background:#154c4a;opacity:.85}
+.btn{display:inline-block;background:var(--brass);color:var(--ink);padding:12px 26px;text-decoration:none;border:0;font:600 1rem Karla,sans-serif;cursor:pointer}
+.btn:hover{background:#cb9a48}
+.btn.full{width:100%;margin-top:10px}
+.usp{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:20px 4vw;background:var(--sand);text-align:center;font-size:.95rem}
+.shop{padding:56px 4vw}
+.shop h2{font-size:2rem;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:26px}
+.card{position:relative}
+.card .art{aspect-ratio:1;display:grid;place-items:center;font:3.5rem Marcellus,serif;color:rgba(255,255,255,.85)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.badge{position:absolute;top:10px;left:10px;background:var(--sale);color:#fff;padding:2px 10px;font-size:.85rem}
+.card h3{font-size:1.1rem;margin-top:10px}
+.cat{font-size:.85rem;color:#6b665c}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+.price b{font-weight:600}.price s{color:#8a857a;margin-left:6px;font-size:.9rem}
+.card button{background:var(--teal);color:var(--sand);border:0;padding:8px 14px;font:inherit;cursor:pointer}
+.card button:hover{background:var(--plum)}
+.empty{color:#6b665c}
+footer{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;padding:40px 4vw;background:var(--ink);color:var(--sand)}
+footer h4{margin-bottom:8px;font-size:1.1rem}
+footer a{color:var(--brass)}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .2s;z-index:10}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(410px,100%);background:#fff;z-index:11;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #ddd}
+.ship{padding:12px 20px;font-size:.9rem;background:var(--sand)}
+.meter{height:6px;background:#d9cfba;margin-top:6px}.meter i{display:block;height:100%;width:0;background:var(--teal);transition:width .3s}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.line{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #eee}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:26px;height:26px;border:1px solid var(--ink);background:none;cursor:pointer}
+.df{padding:18px 20px;border-top:1px solid #ddd}
+.total{display:flex;justify-content:space-between;font-size:1.1rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero svg{min-height:140px}#search{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
